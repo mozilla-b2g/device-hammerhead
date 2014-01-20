@@ -208,6 +208,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     bdAddrLoader
 
+# for Gecko to support bluedroid stack
+PRODUCT_PACKAGES += \
+    bluetooth.default
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608
 
