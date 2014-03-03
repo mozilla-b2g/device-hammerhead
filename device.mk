@@ -373,6 +373,10 @@ endif
 # for Gecko
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.moz.has_home_button=0 \
+    ro.moz.nfc.enabled=true
+
+PRODUCT_PACKAGES += \
+    nfcd
 
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/volume.cfg:system/etc/volume.cfg
