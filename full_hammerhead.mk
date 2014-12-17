@@ -32,3 +32,5 @@ PRODUCT_RESTRICT_VENDOR_FILES := true
 
 $(call inherit-product, device/lge/hammerhead/device.mk)
 $(call inherit-product-if-exists, vendor/lge/hammerhead/device-vendor.mk)
+
+PRODUCT_PACKAGES := $(filter-out @inherit:vendor/lge/hammerhead/device-vendor.mk,$(PRODUCT_PACKAGES))
