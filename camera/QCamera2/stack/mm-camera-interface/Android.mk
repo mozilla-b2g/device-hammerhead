@@ -2,6 +2,7 @@ OLD_LOCAL_PATH := $(LOCAL_PATH)
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
+include device/qcom/common/utils.mk
 
 MM_CAM_FILES := \
         src/mm_camera_interface.c \
