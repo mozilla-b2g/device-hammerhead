@@ -379,7 +379,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/volume.cfg:system/etc/volume.cfg
 
-GAIA_DEV_PIXELS_PER_PX := 2.0
+GAIA_DEV_PIXELS_PER_PX := 2.25
 
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
