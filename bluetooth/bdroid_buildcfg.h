@@ -17,6 +17,16 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
+/**
+ * B2G common configuration. The header is under
+ *   $(GECKO_PATH)/dom/bluetooth/bluedroid/
+ */
+#include "b2g_bdroid_buildcfg.h"
+
+/**
+ * Device specific configuration
+ */
+#define BTM_DEF_LOCAL_NAME   "Nexus5"
 #define BTA_DISABLE_DELAY 100 /* in milliseconds */
 
 #define BTM_BLE_ADV_TX_POWER {-21, -15, -7, 1, 9}
