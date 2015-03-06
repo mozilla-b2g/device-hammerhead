@@ -41,13 +41,16 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 
 BOARD_USES_ALSA_AUDIO := true
 
+# Use default Gecko location if it's not provided in config files.
+GECKO_PATH ?= gecko
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
 ifeq ($(TARGET_PRODUCT),car_hammerhead)
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/hammerhead/bluetooth_car
 else
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/hammerhead/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/hammerhead/bluetooth \
+                                               $(GECKO_PATH)/dom/bluetooth/bluedroid
 endif
 
 # Wifi related defines
