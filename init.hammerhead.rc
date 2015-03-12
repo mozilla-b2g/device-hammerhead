@@ -459,3 +459,6 @@ service time_daemon /system/bin/time_daemon
     class late_start
     user root
     group root
+
+on boot
+   setprop persist.radio.apm_sim_not_pwdn 0
