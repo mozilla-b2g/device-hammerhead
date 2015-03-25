@@ -34,11 +34,7 @@ install_blobs() {
     done
 }
 
-HAMMERHEAD_BLOBS="
-    broadcom-hammerhead-lrx21o-01fad5db.tgz
-    lge-hammerhead-lrx21o-c6cf4582.tgz
-    qcom-hammerhead-lrx21o-e0cd4949.tgz
-    "
+HAMMERHEAD_BLOBS=`cat $PWD/blob-shasums | cut -d '?' -f 2`
 
 CSUM_LIST="$PWD/blob-shasums"
 
