@@ -26,7 +26,7 @@ TARGET_NO_BOOTLOADER := true
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=hammerhead user_debug=31 maxcpus=2 msm_watchdog_v2.enable=1
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=hammerhead user_debug=31 maxcpus=2 msm_watchdog_v2.enable=1 androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02900000 --tags_offset 0x02700000
 
 # Shader cache config options
@@ -41,13 +41,16 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 
 BOARD_USES_ALSA_AUDIO := true
 
+# Use default Gecko location if it's not provided in config files.
+GECKO_PATH ?= gecko
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
 ifeq ($(TARGET_PRODUCT),car_hammerhead)
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/hammerhead/bluetooth_car
 else
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/hammerhead/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/hammerhead/bluetooth \
+                                               $(GECKO_PATH)/dom/bluetooth/bluedroid
 endif
 
 # Wifi related defines
