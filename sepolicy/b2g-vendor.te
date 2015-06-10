@@ -1,0 +1,26 @@
+# device specific vendor domains that need to interact with generic b2g domains
+
+# audit2allow
+unix_socket_connect(b2g, sensors, sensors)
+
+unix_socket_send(b2g, mpdecision, mpdecision)
+
+allow b2g adb_data_file:dir { read write getattr open };
+allow b2g camera_socket:sock_file getattr;
+allow b2g diag_logs:dir { read write getattr open };
+allow b2g persist_file:dir { read open search };
+allow b2g persist_wifi_file:dir search;
+allow b2g persist_wifi_file:file { read getattr open };
+allow b2g qmuxd_socket:dir { write search add_name };
+allow b2g qmuxd_socket:sock_file { write create setattr };
+allow b2g qmux:unix_stream_socket connectto;
+allow b2g ramdump_data_file:dir { read write getattr open };
+allow b2g sensors_data_file:dir { read write getattr open };
+allow b2g shared_log_device:chr_file { read write ioctl open };
+allow b2g sysfs_surfaceflinger:file { read write open };
+allow b2g time_data_file:dir { read write getattr open };
+
+allow mpdecision b2g:dir search;
+allow mpdecision b2g:file { read open };
+
+allow camera b2g:fd use;
