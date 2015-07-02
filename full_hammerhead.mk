@@ -31,6 +31,10 @@ PRODUCT_MANUFACTURER := LGE
 PRODUCT_RESTRICT_VENDOR_FILES := true
 
 ENABLE_LIBRECOVERY := true
+RECOVERY_EXTERNAL_STORAGE := /data/media/0
+# Enable set_metadata() and set_metadata_recursive() in updater-script
+# if device deprecates set_perm() and set_perm_recursive()
+export USE_SET_METADATA := true
 
 $(call inherit-product, device/lge/hammerhead/device.mk)
 $(call inherit-product-if-exists, vendor/lge/hammerhead/device-vendor.mk)
