@@ -36,6 +36,10 @@ RECOVERY_EXTERNAL_STORAGE := /data/media/0
 # if device deprecates set_perm() and set_perm_recursive()
 export USE_SET_METADATA := true
 
+TARGET_DEVICE_BLOBS := vendor/lge/hammerhead/device-partial.mk \
+                       vendor/broadcom/hammerhead/device-partial.mk \
+                       vendor/qcom/hammerhead/device-partial.mk
+
 $(call inherit-product, device/lge/hammerhead/device.mk)
 $(call inherit-product-if-exists, vendor/lge/hammerhead/device-vendor.mk)
 
