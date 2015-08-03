@@ -113,6 +113,7 @@ BOARD_SEPOLICY_DIRS += \
 # The list below is order dependent
 BOARD_SEPOLICY_UNION += \
        app.te \
+       b2g-vendor.te \
        bluetooth_loader.te \
        bridge.te \
        camera.te \
