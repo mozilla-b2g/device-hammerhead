@@ -1,0 +1,14 @@
+[
+  {
+    "id": "Nexus 5",
+    "adb": {
+      "ro.product.device": [ "hammerhead" ],
+      "ro.bootloader": "HHZ11k",
+      "ro.build.id": "KTU84P"
+    },
+    "fastboot": {
+      "product": [ "hammerhead" ]
+    }
+  }
+]
+

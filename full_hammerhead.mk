@@ -30,5 +30,9 @@ PRODUCT_MODEL := AOSP on HammerHead
 PRODUCT_MANUFACTURER := LGE
 PRODUCT_RESTRICT_VENDOR_FILES := true
 
+TARGET_DEVICE_BLOBS := vendor/lge/hammerhead/device-partial.mk \
+                       vendor/broadcom/hammerhead/device-partial.mk \
+                       vendor/qcom/hammerhead/device-partial.mk
+
 $(call inherit-product, device/lge/hammerhead/device.mk)
 $(call inherit-product-if-exists, vendor/lge/hammerhead/device-vendor.mk)
