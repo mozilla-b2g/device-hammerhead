@@ -1,0 +1,14 @@
+[
+  {
+    "id": "Nexus 5",
+    "adb": {
+      "ro.product.device": [ "hammerhead" ],
+      "ro.bootloader": "HHZ11k",
+      "ro.build.id": ["LMY48I", "LMY48B", "LMY47I", "LMY47D", "LRX22C", "LRX21O"]
+    },
+    "fastboot": {
+      "product": [ "hammerhead" ]
+    }
+  }
+]
+
