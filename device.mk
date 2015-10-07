@@ -384,6 +384,9 @@ PRODUCT_COPY_FILES += \
 
 GAIA_DEV_PIXELS_PER_PX := 2.25
 
+ENABLE_DEFAULT_BOOTANIMATION := true
+BOOTANIMATION_ASSET_SIZE := 1080p
+
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
