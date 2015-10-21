@@ -49,8 +49,9 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 ifeq ($(TARGET_PRODUCT),car_hammerhead)
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/hammerhead/bluetooth_car
 else
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/hammerhead/bluetooth \
-                                               $(GECKO_PATH)/dom/bluetooth/bluedroid
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := \
+  device/lge/hammerhead/bluetooth \
+  hardware/libhardware_moz/include/hardware_moz/bluetooth/bluedroid
 endif
 
 # Wifi related defines
