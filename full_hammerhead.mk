@@ -34,5 +34,8 @@ TARGET_DEVICE_BLOBS := vendor/lge/hammerhead/device-partial.mk \
                        vendor/broadcom/hammerhead/device-partial.mk \
                        vendor/qcom/hammerhead/device-partial.mk
 
+# Build Gecko with gcc-4.9
+GECKO_TOOLS_PREFIX = prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
+
 $(call inherit-product, device/lge/hammerhead/device.mk)
 $(call inherit-product-if-exists, vendor/lge/hammerhead/device-vendor.mk)
